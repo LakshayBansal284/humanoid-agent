@@ -1,0 +1,109 @@
+[
+  {
+    "scenario": "key_door",
+    "goal": "Find the key (k), unlock the locked door (D), and step onto the goal tile (G).",
+    "success": true,
+    "steps": 14,
+    "max_steps": 40,
+    "log": [
+      {
+        "step": 1,
+        "action": "look",
+        "result": "You look around carefully from (1, 1).\nLocation: Entrance.\n\n  NORTH (1,0): solid wall [blocked]\n  SOUTH (1,2): floor | item: key (A small iron key \u2014 use it on an adjacent locked door)\n  EAST  (2,1): floor\n  WEST  (0,1): solid wall [blocked]",
+        "agent_pos": [1, 1],
+        "inventory": []
+      },
+      {
+        "step": 2,
+        "action": "move",
+        "result": "You move south to (1, 2). You see a key here \u2014 A small iron key \u2014 use it on an adjacent locked door.",
+        "agent_pos": [1, 2],
+        "inventory": []
+      },
+      {
+        "step": 3,
+        "action": "pick_up",
+        "result": "You pick up the key.",
+        "agent_pos": [1, 2],
+        "inventory": ["key"]
+      },
+      {
+        "step": 4,
+        "action": "move",
+        "result": "You move south to (1, 3).",
+        "agent_pos": [1, 3],
+        "inventory": ["key"]
+      },
+      {
+        "step": 5,
+        "action": "move",
+        "result": "You move east to (2, 3).",
+        "agent_pos": [2, 3],
+        "inventory": ["key"]
+      },
+      {
+        "step": 6,
+        "action": "move",
+        "result": "You move east to (3, 3).",
+        "agent_pos": [3, 3],
+        "inventory": ["key"]
+      },
+      {
+        "step": 7,
+        "action": "move",
+        "result": "You move east to (4, 3). You are now in: Main corridor.",
+        "agent_pos": [4, 3],
+        "inventory": ["key"]
+      },
+      {
+        "step": 8,
+        "action": "move",
+        "result": "You move south to (4, 4).",
+        "agent_pos": [4, 4],
+        "inventory": ["key"]
+      },
+      {
+        "step": 9,
+        "action": "move",
+        "result": "You move south to (4, 5).",
+        "agent_pos": [4, 5],
+        "inventory": ["key"]
+      },
+      {
+        "step": 10,
+        "action": "move",
+        "result": "You move east to (5, 5). A locked door blocks your path to the east. You'll need a key to open it.",
+        "agent_pos": [4, 5],
+        "inventory": ["key"]
+      },
+      {
+        "step": 11,
+        "action": "use_item",
+        "result": "You use the key on the locked door to the east. It swings open!",
+        "agent_pos": [4, 5],
+        "inventory": []
+      },
+      {
+        "step": 12,
+        "action": "move",
+        "result": "You move east to (5, 5).",
+        "agent_pos": [5, 5],
+        "inventory": []
+      },
+      {
+        "step": 13,
+        "action": "move",
+        "result": "You move east to (6, 5).",
+        "agent_pos": [6, 5],
+        "inventory": []
+      },
+      {
+        "step": 14,
+        "action": "move",
+        "result": "\ud83c\udf89 You step onto the GOAL tile \u2014 task complete!",
+        "agent_pos": [7, 5],
+        "inventory": []
+      }
+    ]
+  }
+]
